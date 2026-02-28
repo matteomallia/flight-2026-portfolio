@@ -1,0 +1,102 @@
+// 1. VARIABILI
+$gold-accent: #e0c068;
+$primary-blue: #1b263b;
+$darker-blue: #0d1b2a;
+$white-cloud: #e0e1dd;
+$font-main: 'Inter', sans-serif;
+$font-mono: 'JetBrains Mono', monospace;
+
+// 2. BASE
+body {
+    background-color: $darker-blue;
+    color: $white-cloud;
+    font-family: $font-main;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+// 3. NAVBAR & MENU OFFCANVAS (Fix per evitare il bianco nel CV)
+.custom-radar-nav {
+    background: rgba(13, 27, 42, 0.95);
+    border-bottom: 1px solid rgba($gold-accent, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 0.8rem 0;
+
+    .navbar-brand {
+        color: $gold-accent !important;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        span { font-size: 0.7rem; opacity: 0.5; }
+    }
+}
+
+.offcanvas {
+    width: 320px !important;
+    background-color: $darker-blue !important; // Forza il blu scurissimo
+    border-left: 1px solid rgba($gold-accent, 0.5) !important;
+
+    .offcanvas-header {
+        border-bottom: 1px solid rgba($gold-accent, 0.1);
+        .btn-close {
+            filter: invert(1) grayscale(1) brightness(2); // Rende la X bianca
+        }
+    }
+
+    .offcanvas-title {
+        color: $gold-accent !important;
+        font-family: $font-mono;
+    }
+
+    .offcanvas-body {
+        background-color: $darker-blue !important;
+        
+        .nav-link {
+            color: $white-cloud !important;
+            padding: 1rem !important;
+            transition: 0.3s;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+
+            i { color: $gold-accent; margin-right: 15px; font-size: 1.2rem; }
+            
+            &:hover, &.active { 
+                background: rgba($gold-accent, 0.15) !important; 
+                color: $gold-accent !important; 
+                transform: translateX(10px); 
+            }
+        }
+    }
+}
+
+// 4. TIMELINE (CV)
+.flight-path {
+    border-left: 2px dashed rgba($gold-accent, 0.4);
+    margin-left: 15px;
+    padding-left: 25px;
+    .timeline-item {
+        position: relative; margin-bottom: 3rem;
+        &::before {
+            content: '\f22d'; font-family: "bootstrap-icons";
+            position: absolute; left: -38px; top: 0;
+            background: $darker-blue; color: $gold-accent; padding: 5px 0;
+        }
+    }
+}
+
+// 5. CARDS (PASSAPORTO)
+.continent-card {
+    cursor: pointer; transition: 0.4s;
+    &:hover { transform: translateY(-10px); border-color: $gold-accent !important; background: rgba($gold-accent, 0.1); }
+}
+
+// 6. UI COMPONENTS
+.glass-panel { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba($gold-accent, 0.2); border-radius: 20px; }
+.btn-gold { background-color: $gold-accent; color: $darker-blue; &:hover { background-color: #fff; } }
+.text-gold { color: $gold-accent !important; }
+.font-mono { font-family: $font-mono; }
+.uppercase { text-transform: uppercase; }
+.animate-fade-in { animation: fadeIn 0.8s ease forwards; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }

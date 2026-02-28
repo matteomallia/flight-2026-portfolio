@@ -1,0 +1,106 @@
+body {
+  background-color: #0a192f;
+  color: #f8f9fa;
+  font-family: "Inter", sans-serif;
+}
+
+.custom-radar-nav {
+  background: rgba(10, 25, 47, 0.95);
+  border-bottom: 1px solid #d4af37;
+}
+.custom-radar-nav .navbar-brand {
+  color: #d4af37 !important;
+  font-weight: bold;
+}
+.custom-radar-nav .navbar-brand span {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+.custom-radar-nav .nav-link {
+  color: #f8f9fa !important;
+}
+.custom-radar-nav .nav-link:hover {
+  color: #d4af37 !important;
+}
+
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url("../img/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.btn-outline-gold {
+  color: #d4af37;
+  border: 1px solid #d4af37;
+}
+.btn-outline-gold:hover {
+  background-color: #d4af37;
+  color: #0a192f;
+}
+
+.text-gold {
+  color: #d4af37;
+}
+
+.bg-gold {
+  background-color: #d4af37;
+  color: #0a192f;
+}
+
+.btn-gold {
+  background-color: #d4af37;
+  color: #0a192f;
+  font-weight: bold;
+}
+.btn-gold:hover {
+  background-color: rgb(221.024691358, 191.7901234568, 96.975308642);
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.timeline .timeline-item .timeline-date {
+  min-width: 120px;
+  text-align: right;
+  font-weight: bold;
+}
+.timeline .timeline-item .timeline-content {
+  padding-bottom: 20px;
+}
+.timeline .timeline-item .timeline-content h3 {
+  font-size: 1.5rem;
+  color: #f8f9fa;
+}
+.timeline .timeline-item .timeline-content p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .timeline-content {
+    border-start: none !important;
+    border-top: 1px solid #d4af37;
+    padding-top: 15px;
+    margin-top: 10px;
+  }
+  .timeline-date {
+    text-align: left !important;
+  }
+}
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+.project-card img {
+  filter: grayscale(50%);
+  transition: 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+}
+.project-card:hover img {
+  filter: grayscale(0%);
+}/*# sourceMappingURL=style.css.map */
