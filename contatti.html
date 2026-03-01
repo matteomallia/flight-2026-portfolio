@@ -12,6 +12,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          // Inizializzazione con la tua Public Key
+          emailjs.init("PTwB8NNzpyEL2GEUa");
+       })();
+    </script>
 </head>
 <body class="bg-darker-blue text-white">
 
@@ -19,28 +27,15 @@
         <div class="container d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center flex-wrap gap-3">
                 <a class="navbar-brand me-3" href="index.html">M. MALLIA <span>FLIGHT 2026</span></a>
-                
                 <div class="d-none d-lg-block border-start border-gold-subtle h-25 mx-2" style="width:1px; height:20px !important;"></div>
-
                 <div class="nav-social-icons d-flex gap-3 align-items-center">
-                    <a href="https://www.instagram.com/matteo_mallia99/" target="_blank" class="text-gold">
-                        <i class="bi bi-instagram fs-5"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/matteo-mallia/" target="_blank" class="text-gold">
-                        <i class="bi bi-linkedin fs-5"></i>
-                    </a>
-                    <a href="tel:+393313692727" class="text-gold d-none d-md-inline small font-mono text-decoration-none">
-                        <i class="bi bi-telephone-fill me-1"></i> 331 3692727
-                    </a>
-                    <a href="mailto:matteo.mallia@salesianitreviglio.it" class="text-gold d-none d-md-inline small font-mono text-decoration-none">
-                        <i class="bi bi-envelope-at-fill me-1"></i> matteo.mallia@salesianitreviglio.it
-                    </a>
+                    <a href="https://www.instagram.com/matteo_mallia99/" target="_blank" class="text-gold"><i class="bi bi-instagram fs-5"></i></a>
+                    <a href="https://www.linkedin.com/in/matteo-mallia/" target="_blank" class="text-gold"><i class="bi bi-linkedin fs-5"></i></a>
+                    <a href="tel:+393313692727" class="text-gold d-none d-md-inline small font-mono text-decoration-none"><i class="bi bi-telephone-fill me-1"></i> 331 3692727</a>
+                    <a href="mailto:matteo.mallia@salesianitreviglio.it" class="text-gold d-none d-md-inline small font-mono text-decoration-none"><i class="bi bi-envelope-at-fill me-1"></i> matteo.mallia@salesianitreviglio.it</a>
                 </div>
             </div>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
-                <i class="bi bi-list text-gold fs-2"></i>
-            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"><i class="bi bi-list text-gold fs-2"></i></button>
         </div>
     </nav>
 
@@ -62,16 +57,12 @@
 
     <main class="container my-5">
         <div class="mb-5 animate-fade-in">
-            <a href="index.html" class="btn btn-outline-gold btn-sm border-gold">
-                <i class="bi bi-arrow-left"></i> Torna al Terminal
-            </a>
+            <a href="index.html" class="btn btn-outline-gold btn-sm border-gold"><i class="bi bi-arrow-left"></i> Torna al Terminal</a>
         </div>
 
         <div class="text-center mb-5 animate-fade-in">
             <h1 class="text-gold display-4 fw-bold uppercase">Ready for Boarding?</h1>
-            <p class="mx-auto lead opacity-75 font-inter" style="max-width: 800px;">
-                Compila la tua carta d'imbarco per scambiare idee, collaborare a progetti o richiedere consulenze.
-            </p>
+            <p class="mx-auto lead opacity-75 font-inter" style="max-width: 800px;">Compila la tua carta d'imbarco per scambiare idee o richiedere consulenze.</p>
         </div>
 
         <div class="row justify-content-center animate-fade-in">
@@ -86,19 +77,19 @@
                         <div class="row g-4">
                             <div class="col-md-6 text-start">
                                 <label class="small fw-bold text-secondary uppercase">Nome / First Name</label>
-                                <input type="text" class="form-control text-dark border-0 border-bottom border-dark rounded-0 p-1" placeholder="Es: Matteo" required>
+                                <input type="text" id="user_nome" class="form-control text-dark border-0 border-bottom border-dark rounded-0 p-1" placeholder="Es: Matteo" required>
                             </div>
                             <div class="col-md-6 text-start">
                                 <label class="small fw-bold text-secondary uppercase">Cognome / Last Name</label>
-                                <input type="text" class="form-control text-dark border-0 border-bottom border-dark rounded-0 p-1" placeholder="Es: Mallia" required>
+                                <input type="text" id="user_cognome" class="form-control text-dark border-0 border-bottom border-dark rounded-0 p-1" placeholder="Es: Mallia" required>
                             </div>
                             <div class="col-md-6 text-start">
                                 <label class="small fw-bold text-secondary uppercase">Email</label>
-                                <input type="email" class="form-control text-dark border-0 border-bottom border-dark rounded-0 p-1" placeholder="nome@esempio.com" required>
+                                <input type="email" id="user_email" class="form-control text-dark border-0 border-bottom border-dark rounded-0 p-1" placeholder="nome@esempio.com" required>
                             </div>
                             <div class="col-md-6 text-start">
                                 <label class="small fw-bold text-secondary uppercase">Telefono / Phone</label>
-                                <input type="tel" class="form-control text-dark border-0 border-bottom border-dark rounded-0 p-1" placeholder="+39...">
+                                <input type="tel" id="user_tel" class="form-control text-dark border-0 border-bottom border-dark rounded-0 p-1" placeholder="+39...">
                             </div>
                             <div class="col-12 text-start">
                                 <label class="small fw-bold text-secondary uppercase">Destinazione / Purpose</label>
@@ -112,24 +103,20 @@
                             </div>
                             <div class="col-12 d-none text-start" id="altroInput">
                                 <label class="small fw-bold text-secondary uppercase">Specifica / Specify</label>
-                                <input type="text" class="form-control text-dark border-0 border-bottom border-dark rounded-0 p-1">
+                                <input type="text" id="user_specifica" class="form-control text-dark border-0 border-bottom border-dark rounded-0 p-1">
                             </div>
                             <div class="col-12 text-start">
                                 <label class="small fw-bold text-secondary uppercase">Messaggio / Message</label>
-                                <textarea class="form-control text-dark border border-secondary rounded-0" rows="3" placeholder="Scrivi qui..."></textarea>
+                                <textarea id="user_messaggio" class="form-control text-dark border border-secondary rounded-0" rows="3" placeholder="Scrivi qui..."></textarea>
                             </div>
                             <div class="col-12">
                                 <div class="form-check text-start">
                                     <input class="form-check-input border-dark" type="checkbox" id="privacy" required>
-                                    <label class="form-check-label small text-dark" for="privacy">
-                                        Acconsento al trattamento dei dati personali (GDPR).
-                                    </label>
+                                    <label class="form-check-label small text-dark" for="privacy">Acconsento al trattamento dei dati personali (GDPR).</label>
                                 </div>
                             </div>
                             <div class="col-12 text-center mt-5">
-                                <button type="submit" class="btn btn-dark w-100 py-3 fw-bold tracking-widest uppercase">
-                                    Emetti Biglietto / Issue Ticket
-                                </button>
+                                <button type="submit" id="submit-btn" class="btn btn-dark w-100 py-3 fw-bold tracking-widest uppercase">Emetti Biglietto / Issue Ticket</button>
                             </div>
                         </div>
                     </form>
@@ -140,9 +127,9 @@
                 <div class="glass-panel p-5 border-gold">
                     <i class="bi bi-check-circle-fill text-gold display-1 mb-4"></i>
                     <h2 class="text-gold h1 fw-bold uppercase">Ticket Emesso!</h2>
-                    <p class="lead mb-5 text-white">Il tuo messaggio è stato registrato nel log di volo. Riceverai una risposta a breve.</p>
+                    <p class="lead mb-5 text-white">Controlla la tua email, abbiamo inviato il riepilogo del check-in.</p>
                     <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
-                        <button onclick="resetBoarding()" class="btn btn-outline-gold px-4 py-2">Richiedi Nuova Boarding Pass</button>
+                        <button onclick="resetBoarding()" class="btn btn-outline-gold px-4 py-2">Nuova Boarding Pass</button>
                         <a href="index.html" class="btn btn-gold px-4 py-2 text-dark fw-bold">Torna al Terminal</a>
                     </div>
                 </div>
@@ -150,25 +137,55 @@
         </div>
     </main>
 
-    <footer class="py-5 text-center mt-5 border-top border-gold-subtle">
-        <p class="mb-0 opacity-50 small">Matteo Mallia &copy; 2026 | All Rights Reserved</p>
-    </footer>
-
     <script>
         function checkAltro(select) {
             const extra = document.getElementById('altroInput');
-            if(select.value === 'Other') {
-                extra.classList.remove('d-none');
-            } else {
-                extra.classList.add('d-none');
-            }
+            if(select.value === 'Other') { extra.classList.remove('d-none'); } 
+            else { extra.classList.add('d-none'); }
         }
 
         function handleForm(e) {
             e.preventDefault();
-            document.getElementById('form-container').classList.add('d-none');
-            document.getElementById('success-message').classList.remove('d-none');
-            window.scrollTo(0,0);
+            
+            const btn = document.getElementById('submit-btn');
+            btn.innerHTML = "ELABORAZIONE IN CORSO...";
+            btn.disabled = true;
+
+            // Parametri per EmailJS (devono corrispondere ai {{variabili}} nei tuoi template)
+            const templateParams = {
+                nome: document.getElementById('user_nome').value,
+                cognome: document.getElementById('user_cognome').value,
+                email: document.getElementById('user_email').value,
+                tel: document.getElementById('user_tel').value,
+                motivo: document.getElementById('motivoSelect').value,
+                specifica: document.getElementById('user_specifica').value || "N/A",
+                messaggio: document.getElementById('user_messaggio').value
+            };
+
+            const serviceID = "service_kz7y857";
+            const templateAdminID = "template_ywjp8l9"; // Template per te
+            const templateUserID = "template_nm6gema";  // Template per l'utente
+
+            // 1. Invia email a te stesso
+            emailjs.send(serviceID, templateAdminID, templateParams)
+                .then(() => {
+                    // 2. Invia email di riepilogo all'utente
+                    return emailjs.send(serviceID, templateUserID, templateParams);
+                })
+                .then(() => {
+                    // Successo finale
+                    document.getElementById('form-container').classList.add('d-none');
+                    document.getElementById('success-message').classList.remove('d-none');
+                    window.scrollTo(0,0);
+                })
+                .catch((error) => {
+                    console.error("Errore EmailJS:", error);
+                    alert("Si è verificato un errore durante l'invio. Riprova più tardi.");
+                })
+                .finally(() => {
+                    btn.innerHTML = "Emetti Biglietto / Issue Ticket";
+                    btn.disabled = false;
+                });
         }
 
         function resetBoarding() {
